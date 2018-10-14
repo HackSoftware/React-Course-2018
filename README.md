@@ -12,3 +12,8 @@ Repo for holding code samples &amp; materials for React Course 2018.
   * `npx --version` -> `6.4.1`
 * For installing packages, we are going to use [yarn](https://yarnpkg.com/lang/en/docs/install/)
   * `yarn --version` -> `1.10.1`
+
+## Warming up
+
+* [Introducing npx: an npm package runner](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b)
+* [What the heck is the event loop anyway?](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
