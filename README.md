@@ -9,3 +9,5 @@ Repo for holding code samples &amp; materials for React Course 2018.
 * For `node`, we'll use the latest greatest version: `nvm install 10.12`
   * `node --version` -> `v10.12.10`
   * `npm --version` -> `6.4.1`
+* For installing packages, we'll use [yarn](https://yarnpkg.com/lang/en/docs/install/)
+  * `yarn --version` -> `1.10.1`
