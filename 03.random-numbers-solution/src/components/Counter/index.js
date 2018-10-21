@@ -9,6 +9,10 @@ class Counter extends React.Component {
     };
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state.value !== nextState.value;
+  }
+
   increase = () => {
     const {value} = this.state;
 
@@ -22,6 +26,8 @@ class Counter extends React.Component {
   };
 
   render() {
+    console.log('In Counter render');
+
     const {value} = this.state;
 
     return (
