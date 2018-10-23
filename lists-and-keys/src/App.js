@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import './App.css';
 
+import List from './components/List';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -31,11 +33,9 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state);
-
     return (
       <div className="App">
-        <button onClick={this.handleClick}>Click</button>
+        <List />
       </div>
     );
   }
