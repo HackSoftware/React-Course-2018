@@ -1,0 +1,58 @@
+{
+  "keys": [
+    {
+      "keyName": "Lock"
+    },
+    {
+      "keyName": "//"
+    },
+    {
+      "keyName": "*"
+    },
+    {
+      "keyName": "-"
+    },
+    {
+      "keyName": "1"
+    },
+    {
+      "keyName": "2"
+    },
+    {
+      "keyName": "3"
+    },
+    {
+      "keyName": "+",
+      "doubleHeight": true
+    },
+    {
+      "keyName": "4"
+    },
+    {
+      "keyName": "5"
+    },
+    {
+      "keyName": "6"
+    },
+    {
+      "keyName": "7"
+    },
+    {
+      "keyName": "8"
+    },
+    {
+      "keyName": "9"
+    },
+    {
+      "keyName": "=",
+      "doubleHeight": true
+    },
+    {
+      "keyName": "0",
+      "doubleWidth": true
+    },
+    {
+      "keyName": ","
+    }
+  ]
+}
