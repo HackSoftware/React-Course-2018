@@ -1,6 +1,6 @@
 # Numpad
 
-![numpad](/numpad.png "The numpad!")
+![numpad](numpad.png "The numpad!")
 
 Your task is to implement a numpad with a display and a Num Lock toggle.
 
