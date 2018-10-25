@@ -1,0 +1,13 @@
+.Table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.Table table, th, td {
+  border: 1px solid white;
+}
+
+.Table th, td {
+  height: 50px;
+  padding: 1rem;
+}
