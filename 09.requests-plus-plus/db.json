@@ -1,0 +1,15 @@
+{
+  "company": [
+    { "id": 1, "title": "HackSoft", "type": "ItCompany", "active": true },
+    { "id": 2, "title": "Nemetschek", "type": "ItCompany", "active": false },
+    { "id": 3, "title": "Billa", "type": "Store", "active": true },
+    { "id": 4, "title": "Eco", "type": "PetrolStation", "active": true },
+    { "id": 5, "title": "Go", "type": "PetrolStation", "active": true },
+    { "id": 6, "title": "OMV", "type": "PetrolStation", "active": true }
+  ],
+  "companyType": [
+    { "id": 1, "title": "ItCompany" },
+    { "id": 2, "title": "Store" },
+    { "id": 3, "title": "PetrolStation" }
+  ]
+}
