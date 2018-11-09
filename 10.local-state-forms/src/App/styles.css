@@ -1,0 +1,11 @@
+.App {
+  height: 100vh;
+  font-family: 'PT Sans', sans-serif;
+  background-image: url('./assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

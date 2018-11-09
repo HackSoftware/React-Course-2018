@@ -1,0 +1,39 @@
+.BookingRequestForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #0c0b0bb3;
+  padding: 40px;
+  border-radius: 6px;
+  width: 450px;
+}
+
+.BookingRequestForm button {
+  color: #fff;
+  background-color: #f23e3e;
+  height: 40px;
+  font-size: 14px;
+  border: none;
+  width: 100%;
+  border-radius: 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.BookingRequestForm button:hover,
+.BookingRequestForm button:focus {
+  opacity: 0.9;
+}
+
+.BookingRequestForm .nameAndEmail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.BookingRequestForm .dates {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 20px;
+}
