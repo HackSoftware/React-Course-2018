@@ -54,104 +54,56 @@ class BookingRequestForm extends React.Component {
     });
   }
 
+  updateState = (path, value) => {
+    this.setState(state => {
+      const newState = _.cloneDeep(state);
+      const stateWithChangedField = _.set(newState, path, value);
+
+      return stateWithChangedField;
+    });
+  };
+
+  getFieldValue = path => _.get(this.state, path);
+
+  setFieldErrors = responseData => {
+    this.setState(state => {
+      let form = _.cloneDeep(this.state.form);
+      _.forEach(responseData, (value, key) => {
+        _.set(form, `fields.${key}.errors`, value);
+      });
+
+      return {form};
+    });
+  };
+
   handleNameChange = event => {
     const nameValue = event.target.value;
-    const {form} = this.state;
-    this.setState({
-      form: {
-        ...form,
-        fields: {
-          ...form.fields,
-          name: {
-            ...form.fields.name,
-            value: nameValue
-          }
-        }
-      }
-    });
+
+    this.updateState('form.fields.name.value', nameValue);
   };
 
   handleEmailChange = event => {
     const emailValue = event.target.value;
-    const {form} = this.state;
-    this.setState({
-      form: {
-        ...form,
-        fields: {
-          ...form.fields,
-          email: {
-            ...form.fields.email,
-            value: emailValue
-          }
-        }
-      }
-    });
-  };
 
-  // handleEmailChange = event => {
-  //   const url = 'http://localhost:8000/booking/email-exist/';
-  //   const data = {email: event.target.value};
-  //   axios
-  //     .post(url, data)
-  //     .then(response => {
-  //       const message = response.data.message;
-  //       this.setState({successMessage: message, errorMessage: ''});
-  //     })
-  //     .catch(error => {
-  //       const errorMessage = error.response.data.error;
-  //       this.setState({errorMessage, successMessage: ''});
-  //     });
-  // };
+    this.updateState('form.fields.email.value', emailValue);
+  };
 
   handleStartChange = event => {
     const startValue = event.target.value;
-    const {form} = this.state;
-    this.setState({
-      form: {
-        ...form,
-        fields: {
-          ...form.fields,
-          start: {
-            ...form.fields.start,
-            value: startValue
-          }
-        }
-      }
-    });
+
+    this.updateState('form.fields.start.value', startValue);
   };
 
   handleEndChange = event => {
     const endValue = event.target.value;
-    const {form} = this.state;
-    this.setState({
-      form: {
-        ...form,
-        fields: {
-          ...form.fields,
-          end: {
-            ...form.fields.end,
-            value: endValue
-          }
-        }
-      }
-    });
+
+    this.updateState('form.fields.end.value', endValue);
   };
 
   handleRoomTypeChange = event => {
-    const value = event.target.value;
-    const {form} = this.state;
-    this.setState({
-      form: {
-        ...form,
-        fields: {
-          ...form.fields,
-          roomType: {
-            ...form.fields.roomType,
-            value: value
-          }
-        }
-      }
-    });
+    const roomTypeValue = event.target.value;
+
+    this.updateState('form.fields.roomType.value', roomTypeValue);
   };
 
   handleSubmit = () => {
@@ -178,36 +130,12 @@ class BookingRequestForm extends React.Component {
         this.setState({successMessage: 'Booking request submitted'});
       })
       .catch(errors => {
-        const errorResponse = errors.response.data;
-        const newKeys = {};
-        const {
-          form: {fields}
-        } = this.state;
-        _.mapKeys(errorResponse, (error, key) => {
-          newKeys[key] = {
-            ...fields[key],
-            errors: error
-          };
-        });
-
-        this.setState({
-          form: {
-            fields: {
-              ...fields,
-              ...newKeys
-            }
-          }
-        });
+        this.setFieldErrors(errors.response.data);
       });
   };
 
   handleClear = () => {
-    this.setState({
-      form: {
-        ...this.state.form,
-        fields: this.initialFields
-      }
-    });
+    this.updateState('form.fields', this.initialFields);
   };
 
   render() {
