@@ -1,0 +1,12 @@
+.BookingRequests {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #0c0b0bb3;
+  padding: 40px;
+  border-radius: 6px;
+  width: 450px;
+  color: white;
+
+  margin-left: 20px;
+}
