@@ -1,0 +1,24 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  background-color: white;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.navigation__link {
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.navigation__link + .navigation__link {
+  box-shadow: -1px 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.navigation__link:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}

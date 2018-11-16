@@ -1,0 +1,11 @@
+.login {
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.login--transparent {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 18px;
+}
