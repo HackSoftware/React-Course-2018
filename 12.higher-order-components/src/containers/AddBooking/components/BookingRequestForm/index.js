@@ -58,8 +58,6 @@ class BookingRequestForm extends React.Component {
     axios.get(url).then(response => {
       const roomTypes = response.data;
 
-      debugger;
-
       this.setState({roomTypes});
     });
 
