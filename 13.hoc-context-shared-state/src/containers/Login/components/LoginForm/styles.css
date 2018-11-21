@@ -1,0 +1,16 @@
+.login_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login_form label {
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.login_form input {
+  margin: 10px 0;
+  border-radius: 10px;
+  padding: 12px 20px;
+  border: none;
+}
