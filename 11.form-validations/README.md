@@ -1,44 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Form Validations
 
-## Available Scripts
+Having learned how to submit forms and handle submit errors in the previous lesson, we will now learn how to work with async & sync validations with local state forms. Here are some examples:
 
-In the project directory, you can run:
+![form1](NOT_VALID_NUMBER.png "Not valid number!")
 
-### `npm start`
+![form2](PHONE_ALREADY_TAKEN.png "Phone already taken!")
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Tasks
 
-### `npm test`
+1) When typing in the `name` field, prefill the `email` field if there is an email, correspoing to the name written.
+Validate the name is no more than 20 characters long.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2) Create a room field. When rendering the form for the first time, load only the room options for the first fetched room type. When changing a room type, in the room field load only the available rooms per the selected room type.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Additional endpoints to use:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+1) https://react-forms-backend.herokuapp.com/booking/email-exist-per-name/
+  post api to check wether an email exists per name - returns an email per a given name, expects the following data:
+  ```
+  {
+    name: some-name-here
+  }
+  ```
+  returns a name in the folling format:
+  ```
+    email: some-email-here
+  ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  If no email exists by the given name, the api returns successfull status 200 Ok.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+2) https://react-forms-backend.herokuapp.com/booking/available-rooms/<room_type>/ , where <room_type> is an id of a certain room type
+ get api to fetch the available rooms per room type, returns the data in the following format:
+ ```
+ [
+    {
+        "id": 7,
+        "name": "7",
+        "room_type": "Suite",
+        "available": true
+    },
+    {
+        "id": 1,
+        "name": "1",
+        "room_type": "Suite",
+        "available": true
+    }
+]
+ ```
