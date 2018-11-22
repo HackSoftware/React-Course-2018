@@ -11,12 +11,17 @@ Play list Loaded
 > play
 playing
 > status
-playing - Eminem - Sing For The Moment
+playing - 1. Eminem - Sing For The Moment
 > stop
 stopped
 > status
-stopped - Eminem - Sing For The Moment
+stopped - 1. Eminem - Sing For The Moment
 > playNextSong
 > status
-playing - Eminem - Lose Yourself 
+playing - 2. Eminem - Lose Yourself 
+> shuffle on
+> playNextSong
+> status
+playing - 13. Eminem - Without Me
+> shuffle off
 ```
